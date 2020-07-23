@@ -1,5 +1,10 @@
 ### Hi there 👋
 
+- 🔭 I’m currently interested in new opportunities.
+- 🌱 I’m currently learning Blazor.
+- 🔧 I'm current working on a Portfolio, Dashboard, and Tool example project.
+
+
 <!--
 **JonathanMcCaffrey/JonathanMcCaffrey** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
