@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 - 🔭 I’m currently interested in new opportunities.
-- 🌱 I’m currently learning Blazor, NevVim, and Twitch.
+- 🌱 I’m currently learning Blazor, NeoVim, and Twitch.
 - 🔧 I'm current working on a Portfolio, Dashboard, and Tool example project.
 
 
