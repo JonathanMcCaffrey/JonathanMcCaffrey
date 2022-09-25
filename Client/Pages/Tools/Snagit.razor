@@ -1,4 +1,4 @@
-﻿@page "/TechStack/MudBlazor"
+﻿@page "/Tools/Snagit"
 @using Markdig
 @using Client.Utils
 @inject HttpClient HttpClient
@@ -22,7 +22,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _content = await MarkdownUtils.LoadMarkdown(HttpClient, "pages/techstack/mudblazor/content.md");
+        _content = await MarkdownUtils.LoadMarkdown(HttpClient, "pages/tools/snagit/content.md");
     }
 
 }

@@ -25,10 +25,11 @@ MudBlazor needs to play nicely with loaded text from Markdown.
 
 ![Markdown](pages/techstack/mudblazor/markdown.png)
 
-![Markdown](pages/techstack/mudblazor/render.png)
+![Rendered Markdown](pages/techstack/mudblazor/render.png)
 
 ```razor
 @((MarkupString)Markdown.ToHtml(_content, MarkdownUtils.Pipeline))
 ```
 
 The text looks awful when loaded as-is: MudBlazor removes the bulletin points on the unordered list, and it's all quite squished together without using more CSS theming.
+

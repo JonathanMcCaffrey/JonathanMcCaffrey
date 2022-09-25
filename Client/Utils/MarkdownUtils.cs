@@ -20,8 +20,6 @@ public class MarkdownUtils
 
     public static async Task<string> LoadMarkdown(HttpClient httpClient, string filepath)
     {
-        
-        
         return await httpClient.GetStringAsync(filepath);
     }
 
