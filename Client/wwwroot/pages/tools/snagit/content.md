@@ -19,7 +19,6 @@ of life feature I wouldn't want to live without.
 
 # My Snagit Best Practices
 
-
 ## Use symbols over text
 
 You can't exactly localize or easily fix typos in a picture, so it's better to reference

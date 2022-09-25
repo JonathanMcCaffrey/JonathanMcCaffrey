@@ -76,6 +76,17 @@
     color: var(--mud-palette-primary);
 }
 
-.markdown :visited {
-    color: var(--mud-palette-primary);
+.markdown table {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+.markdown th {
+    padding: 4px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.markdown td {
+    padding: 4px;
 }
