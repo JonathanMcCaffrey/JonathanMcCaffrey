@@ -4,6 +4,6 @@ Currently learning:
 
 - Maintaining databases
 
-Currently projects on:
+Currently working on:
 
 - IGP Fan Reference
