@@ -19,17 +19,3 @@ So that's why I am using MudBlazor, it's better then what I wrote. And should it
 make brand
 new UI and use MudBlazor design as a guide, rather than trying to force MudBlazor up to do and look how I want.
 
-## Markdown Problem
-
-MudBlazor needs to play nicely with loaded text from Markdown. 
-
-![Markdown](pages/techstack/mudblazor/markdown.png)
-
-![Rendered Markdown](pages/techstack/mudblazor/render.png)
-
-```razor
-@((MarkupString)Markdown.ToHtml(_content, MarkdownUtils.Pipeline))
-```
-
-The text looks awful when loaded as-is: MudBlazor removes the bulletin points on the unordered list, and it's all quite squished together without using more CSS theming.
-

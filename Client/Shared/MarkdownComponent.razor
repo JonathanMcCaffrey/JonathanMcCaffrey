@@ -1,12 +1,30 @@
-﻿using Markdig;
-using Markdig.Extensions.Yaml;
-using Markdig.Syntax;
-using YamlDotNet.Serialization;
+﻿@using YamlDotNet.Serialization
+@using Markdig.Extensions.Yaml
+@using Markdig.Syntax
+@inject HttpClient HttpClient
 
-namespace Client.Utils;
-
-public class MarkdownUtils
+@if (_content == null)
 {
+    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7"/>
+}
+else
+{
+    <div class="markdown">
+        @((MarkupString)Markdown.ToHtml(_content, Pipeline))
+    </div>
+}
+
+@code {
+    private string? _content;
+
+    [Parameter]
+    public string FilePath { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _content = await LoadMarkdown(HttpClient, FilePath);
+    }
+
     private static readonly IDeserializer YamlDeserializer =
         new DeserializerBuilder()
             .IgnoreUnmatchedProperties()
@@ -49,4 +67,5 @@ public class MarkdownUtils
 
         return YamlDeserializer.Deserialize<T>(yaml);
     }
+
 }

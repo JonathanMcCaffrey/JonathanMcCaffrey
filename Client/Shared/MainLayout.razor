@@ -1,5 +1,4 @@
-﻿@using MudBlazor
-@inherits LayoutComponentBase
+﻿@inherits LayoutComponentBase
 
 <MudThemeProvider @ref="@_mudThemeProvider" @bind-IsDarkMode="@_isDarkMode"/>
 <MudDialogProvider/>
@@ -32,11 +31,9 @@
             StateHasChanged();
         }
     }
-
-
+    
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
     }
-
 }

@@ -1,28 +1,16 @@
 ﻿@page "/TechStack/Markdown"
-@using Markdig
-@using Client.Utils
-@inject HttpClient HttpClient
-@using MudBlazor
 
 <MudContainer Class="mt-16 px-8" MaxWidth="MaxWidth.False">
     <MudGrid>
         <MudItem xs="12" sm="12" md="8">
             <MudPaper Elevation="2" Class="pa-4">
-                @if (_content != null)
-                {
-                    @((MarkupString)Markdown.ToHtml(_content, MarkdownUtils.Pipeline))
-                }
+                <MarkdownComponent Filepath="pages/techstack/markdown/content.md"></MarkdownComponent>
+                
             </MudPaper>
         </MudItem>
     </MudGrid>
 </MudContainer>
 
 @code {
-    private string? _content;
-
-    protected override async Task OnInitializedAsync()
-    {
-        _content = await MarkdownUtils.LoadMarkdown(HttpClient, "pages/techstack/markdown/content.md");
-    }
-
+    
 }
