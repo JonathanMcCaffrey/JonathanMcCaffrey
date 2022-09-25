@@ -1,24 +1,30 @@
-All documents written in Markdown.
+I use Markdown for writing all documents.
+
+## Why Use Markdown?
+
+For myself, any other text editor just sucks. They are unmaintainable, have awful scalability problems, have terrible
+styling problems with copy and paste, and non-markdown systems can be difficult to extend and improve. Not to mention, I
+never want to touch any system for managing text that doesn't use git or doesn't have branching.
 
 # Heading 1 {#custom-id-1}
 
-Text below heading.
+The text below the heading.
 
 ## Heading 2 {#custom-id-2}
 
-Text below heading.
+The text below the heading.
 
 ### Heading 3 {#custom-id-3}
 
-Text below heading.
+The text below the heading.
 
 #### Heading 4 {#custom-id-4}
 
-Text below heading.
+The text below the heading.
 
 ##### Heading 5 {#custom-id-5}
 
-Text below heading.
+The text below the heading.
 
 - Unordered List
 - Unordered List
@@ -97,6 +103,6 @@ codeblock
 
 > Blockquote
 
-Some text with footnote [^1]
+Some text with a footnote [^1]
 
 [^1]: The footnote text.

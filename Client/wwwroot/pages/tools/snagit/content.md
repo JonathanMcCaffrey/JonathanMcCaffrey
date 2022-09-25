@@ -19,12 +19,13 @@ of life feature I wouldn't want to live without.
 
 # My Snagit Best Practices
 
-## Use symbols over text 
+
+## Use symbols over text
 
 You can't exactly localize or easily fix typos in a picture, so it's better to reference
 text outside.
 
-If needing to add complicated instructions, use step numbers in tne image, and indicate 
+If needing to add complicated instructions, use step numbers in tne image, and indicate
 the steps outside of the image in plain text.
 
 ![Markdown](pages/tools/snagit/steps.png)
@@ -41,7 +42,7 @@ before taking any screenshot of it.
 
 Sure, you could just take a screenshot of the exact
 part of the screen the viewer needs to look at, but I find that doesn't provide me
-enough information. Like, where the button is on the page? And other quick context that gets lossed
+enough information. Like, where the button is on the page? And other quick context that gets lost
 when not showing the full picture.
 
 ![Markdown](pages/tools/snagit/size-example.png)
