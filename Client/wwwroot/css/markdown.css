@@ -71,3 +71,11 @@
     display: list-item;
     margin: initial;
 }
+
+.markdown :link {
+    color: var(--mud-palette-primary);
+}
+
+.markdown :visited {
+    color: var(--mud-palette-primary);
+}
