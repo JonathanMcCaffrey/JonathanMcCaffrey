@@ -1,0 +1,72 @@
+﻿@page "/TechStack/GraphQl"
+@using Model
+@using GraphQL
+@using GraphQL.Client.Abstractions
+@inject IGraphQLClient GraphQlClient 
+
+
+<MudContainer Class="mt-16 px-8" MaxWidth="MaxWidth.False">
+    <MudGrid>
+        <MudItem xs="12" sm="12" md="8">
+            <MudPaper Elevation="2" Class="pa-4">
+                <MarkdownComponent Filepath="pages/techstack/graphql/content.md"></MarkdownComponent>
+                
+                <h2>Data Loaded from GraphQL</h2>
+
+                @if (_todos == null)
+                {
+                    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7"/>
+                }
+                else
+                {
+                    @foreach (var todo in _todos)
+                    {
+                        <div>
+                            @todo.Name
+                        </div>
+                        <div>
+                            @todo.Description
+                        </div>
+                        <div>
+                            @todo.Status.Value
+                        </div>
+                    }
+                }
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+
+@code {
+    List<ToDo>? _todos;
+
+    public class Response
+    {
+        public List<ToDo> toDos { get; set; }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var query = new GraphQLRequest
+        {
+            Query = @"query todo {
+                      toDos {
+                        id
+                        name
+                        description
+                        statusKey
+                        status {
+                          key
+                          value
+                          description
+                        }
+                      }
+                    }
+                    "
+        };
+
+        _todos = (await GraphQlClient.SendQueryAsync<Response>(query)).Data.toDos;
+    }
+
+}
