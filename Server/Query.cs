@@ -1,20 +1,22 @@
-﻿namespace Server;
+﻿using Model;
+
+namespace Server;
 
 public class Query
 {
     [UseProjection]
-    public IEnumerable<ToDo> GetToDos([Service] jonathanmccaffreyContext context) =>
+    public IEnumerable<ToDo> GetToDos([Service] Context context) =>
         context.ToDos.Select(todo => new ToDo()
         {
             Id = todo.Id,
             Description = todo.Description,
             Name = todo.Name,
             StatusKey = todo.StatusKey,
-            StatusKeyNavigation = new ToDoStatus()
+            Status = new ToDoStatus()
             {
-                Key = todo.StatusKeyNavigation.Key,
-                Description = todo.StatusKeyNavigation.Description,
-                Value = todo.StatusKeyNavigation.Value
+                Key = todo.Status.Key,
+                Description = todo.Status.Description,
+                Value = todo.Status.Value
             }
         });
 }

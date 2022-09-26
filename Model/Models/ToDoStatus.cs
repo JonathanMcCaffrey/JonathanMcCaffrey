@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace Model;
 
-namespace Server
+public partial class ToDoStatus
 {
-    public partial class ToDoStatus
-    {
-        public string Key { get; set; } = null!;
-        public string Value { get; set; } = null!;
-        public string Description { get; set; } = null!;
-    }
+    public string Key { get; set; } = null!;
+    public string Value { get; set; } = null!;
+    public string Description { get; set; } = null!;
 }

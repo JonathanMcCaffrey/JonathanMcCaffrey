@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Model;
 using Server;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +14,7 @@ builder.Services
 
 var connectionString = builder.Configuration["ConnectionStrings:Ex"];
 
-builder.Services.AddDbContext<jonathanmccaffreyContext>(options =>
+builder.Services.AddDbContext<Context>(options =>
     options.UseSqlServer(connectionString));
 
 var app = builder.Build();
