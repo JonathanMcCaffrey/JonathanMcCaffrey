@@ -28,7 +28,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddDbContext<Context>(options =>
-    options.UseSqlServer(Environment.GetEnvironmentVariable("SQLAZURECONNSTR_DATABASE_CONNECTION_STRING")!));
+    options.UseSqlServer(Environment.GetEnvironmentVariable("ConnectionStrings")!));
 
 var app = builder.Build();
 
