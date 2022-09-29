@@ -20,7 +20,7 @@ public partial class Context : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer("Name=ConnectionStrings:Ex");
+            optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("ConnectionStrings")!);
         }
     }
 
