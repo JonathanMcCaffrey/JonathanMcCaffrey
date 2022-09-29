@@ -10,7 +10,8 @@ builder.Services
     .AddQueryType<Query>()
     .AddProjections()
     .AddType<ToDo>()
-    .AddType<ToDoStatus>();
+    .AddType<ToDoStatus>()
+    .AddMutationType<Mutation>();
 
 
 const string myAllowSpecificOrigins = "_myAllowSpecificOrigins";
